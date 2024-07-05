@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center; /* Center text */
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            margin-right: 20px;
+        }
+        .navbar .nav-links {
+            flex: 1;
+            display: flex; /* Ensure links are aligned left */
+            align-items: center;
+        }
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar .nav-links a:hover {
+            background-color: white;
+            color: black;
+        }
+        .navbar .nav-links .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .navbar .nav-links .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .nav-links .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .navbar .nav-links .dropdown-content a:hover {
+            background-color: white;
+            color: black;
+        }
+        .navbar .nav-links .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navbar .search-bar {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .search-bar input[type="text"] {
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .content {
+            padding: 20px;
+            flex: 1; /* Makes content area take up remaining space */
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 300px);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+        }
+        .gallery-item {
+            width: 18%;
+            margin: 10px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .gallery-item a:hover {
+            color: #FF0000;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 98.5%;
+            margin-top: 50px; /* Positions footer 500px from the top of its container */
+        }
+        .footer a {
+            color: #17a2b8;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="BRSQLOGO.png" alt="Logo" width="55" height="50">
+        </div>
+        <div class="nav-links">
+            <a href="Index.html">Home</a>
+            <div class="dropdown">
+                <a href="#">Placeholder</a>
+                <div class="dropdown-content">
+                    <a href="#">Placeholder</a>
+                    <a href="#">Placeholder</a>
+                    <a href="#">Placeholder</a>
+                </div>
+            </div>
+            <a href="contact.html">Contact</a>
+            <a href="Games.html">Games</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button onclick="searchPage()">Search</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="content">
+            <h1>These Are My Games:</h1>
+            <div class="gallery">
+                <!-- Generating 50 placeholder game thumbnails with links -->
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 1">
+                    <a href="#">Placeholder 1</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 2">
+                    <a href="#">Placeholder 2</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 3">
+                    <a href="#">Placeholder 3</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 4">
+                    <a href="#">Placeholder 4</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 5">
+                    <a href="#">Placeholder 5</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 6">
+                    <a href="#">Placeholder 6</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 7">
+                    <a href="#">Placeholder 7</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 8">
+                    <a href="#">Placeholder 8</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 9">
+                    <a href="#">Placeholder 9</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 10">
+                    <a href="#">Placeholder 10</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 11">
+                    <a href="#">Placeholder 11</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 12">
+                    <a href="#">Placeholder 12</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 13">
+                    <a href="#">Placeholder 13</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 14">
+                    <a href="#">Placeholder 14</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 15">
+                    <a href="#">Placeholder 15</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 16">
+                    <a href="#">Placeholder 16</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 17">
+                    <a href="#">Placeholder 17</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 18">
+                    <a href="#">Placeholder 18</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 19">
+                    <a href="#">Placeholder 19</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 20">
+                    <a href="#">Placeholder 20</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 21">
+                    <a href="#">Placeholder 21</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 22">
+                    <a href="#">Placeholder 22</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 23">
+                    <a href="#">Placeholder 23</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 24">
+                    <a href="#">Placeholder 24</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 25">
+                    <a href="#">Placeholder 25</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 26">
+                    <a href="#">Placeholder 26</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 27">
+                    <a href="#">Placeholder 27</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 28">
+                    <a href="#">Placeholder 28</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 29">
+                    <a href="#">Placeholder 29</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 30">
+                    <a href="#">Placeholder 30</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 31">
+                    <a href="#">Placeholder 31</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 32">
+                    <a href="#">Placeholder 32</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 33">
+                    <a href="#">Placeholder 33</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 34">
+                    <a href="#">Placeholder 34</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 35">
+                    <a href="#">Placeholder 35</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 36">
+                    <a href="#">Placeholder 36</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 37">
+                    <a href="#">Placeholder 37</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 38">
+                    <a href="#">Placeholder 38</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 39">
+                    <a href="#">Placeholder 39</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 40">
+                    <a href="#">Placeholder 40</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 41">
+                    <a href="#">Placeholder 41</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 42">
+                    <a href="#">Placeholder 42</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 43">
+                    <a href="#">Placeholder 43</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 44">
+                    <a href="#">Placeholder 44</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 45">
+                    <a href="#">Placeholder 45</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 46">
+                    <a href="#">Placeholder 46</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 47">
+                    <a href="#">Placeholder 47</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 48">
+                    <a href="#">Placeholder 48</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 49">
+                    <a href="#">Placeholder 49</a>
+                </div>
+                <div class="gallery-item">
+                    <img src="game_thumbnail.jpg" alt="Placeholder 50">
+                    <a href="#">Placeholder 50</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>@BRSQGames 2024</p>
+        <p>Follow us on:
+            <a href="https://x.com/BRSQGames">Twitter</a> |
+            <a href="https://www.youtube.com/channel/UCBQFwF7YxF5DagQM-uJ703w">Youtube</a> |
+            <a href="#">Instagram</a>
+        </p>
+    </div>
+
+    <script>
+        function searchPage() {
+            var query = document.getElementById('search-input').value.toLowerCase();
+            if (query === 'home') {
+                window.location.href = 'Index.html';
+            } else if (query === 'contact' || query === 'help') {
+                window.location.href = 'contact.html';
+            } else {
+                alert('That Page Cannot Be Found!');
+            }
+        }
+    </script>
+</body>
+</html>
